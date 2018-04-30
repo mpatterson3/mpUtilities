@@ -1,0 +1,24 @@
+{
+  "name": "mputilities",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "babel-register": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mpatterson3/mpUtilities.git"
+  },
+  "author": "Mitchell Patterson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mpatterson3/mpUtilities/issues"
+  },
+  "homepage": "https://github.com/mpatterson3/mpUtilities#readme"
+}
