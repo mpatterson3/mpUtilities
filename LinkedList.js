@@ -12,11 +12,12 @@ class LL{
 
 	}
 	displayNode(){
+		console.log("Data",data);	
 	}
 	
 }
 n = new Node();
 n.data = 1;
-n.node = new Node();
+n.next = new Node();
 
 
