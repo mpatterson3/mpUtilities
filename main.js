@@ -1,4 +1,5 @@
 ((function () {
+
     const canvas = document.getElementById("canvas");
     const context = canvas.getContext('2d');
     context.fillStyle = "green";
@@ -10,15 +11,13 @@
         start();
     }
     function loop(){
-        if(this.running){
             update();
             render();
             console.log("running");
             window.requestAnimationFrame(loop);
-        }
     }
     function start(){
-        this.running = true;
+        running = true;
     }
     function stop(){
         this.running = false;
@@ -29,7 +28,8 @@
         testx++;
     }
     function render(){
-        context.fillRect(x,50,30,30);
+	context.fillStyle="black";
+        context.fillRect(testx,50,30,30);
     }
     init();
 })());
