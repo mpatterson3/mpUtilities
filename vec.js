@@ -44,4 +44,10 @@ function color(r){
 function assert(condition,message){
     console.log(message,condition == true)
 }
+assert(1+1==2,"1 plus should equal 2");
+var v = new vec(0,0);
+var w = new vec(1,1);
+var u = v.add(w);
+console.log(u);
+
 
