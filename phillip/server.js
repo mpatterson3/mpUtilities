@@ -1,13 +1,29 @@
 const express = require("express");
 const app = express();
-app.use(express.static(__dirname+'/public'));
-
-app.get('/',(req,res)=>res.sendFile("/index.html"));
-app.get('/about',(req,res)=>res.sendFile("/about.html"));
-/*
-app.get('/contact',(req,res)=>res.sendFile("/contact.html"));
-app.get('/register',(req,res)=>res.sendFile("/register.html"));
-*/
-app.listen(3000,()=>console.log("app ready !"));
+const router = express.Router();
+var path = require('path');
+const fakeDatabase = {
+    "Phillip":{job:'professor',pet:'cat.jpg'},
+    "John":{job:'professor',pet:'cat.jpg'},
+    "Mary":{job:'professor',pet:'cat.jpg'}
+};
+//app.use(express.static('/public'));
+router.use(express.static(path.join(__dirname, 'public')));
+router.get('/',function(req,res){
+    res.send("home page");
+    
+});
+router.get('/users',function(req,res){
+    const allUsers = Object.keys(fakeDatabase);
+    res.send(allUsers);
+});
+router.get('/about',function(req,res){
+    res.sendFile("about.html");
+    
+});
+app.use('/',router)
+app.listen(3000,()=>{
+    console.log("app ready !");
+});
 
 
